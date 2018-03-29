@@ -13,4 +13,5 @@ script:
   - yarn prod
   - yarn test
 after_success:
+  - node ./show-vars.js
   - npm run lh --score=100 http://localhost:8080
